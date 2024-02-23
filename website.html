@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Cart Quantity</p>
+<button onclick=
+"
+finalgame('rock');
+">Rock</button>
+<button onclick="
+finalgame('scissors');
+">scissors</button>
+<button onclick="
+finalgame('paper');
+">paper</button>
+<script>
+ function computermovee(){
+    const random=Math.random();
+let computermove='';
+let result='';
+if(random<1/3&&random>=0)
+{
+    computermove='rock';
+
+}
+else if(random>=1/3&&random<2/3)
+{
+    computermove='paper';
+
+}
+else if(random>=2/3&&random<1)
+{
+    computermove='scissors';
+}console.log(computermove);
+return computermove;
+
+ }
+ function finalgame(playermove){
+    computermove=computermovee();
+       let result='';
+    if(playermove==='rock'){
+             
+            if(computermove==='rock')
+        result='you tie.';
+        else if(computermove==='paper')
+        result='you lost:(';
+        else if(computermove==='scissors')
+        result='you win*-*';
+        console.log(result);
+    }
+    else if(playermove==='paper'){
+
+            if(computermove==='rock')
+        result='you win';
+        else if(computermove==='paper')
+        result='you tie';
+        else if(computermove==='scissors')
+        result='you lost.';
+        console.log(result);
+
+    }else if(playermove==='scissors'){
+
+            if(computermove==='rock')
+        result='you lost';
+        else if(computermove==='paper')
+        result='you win';
+        else if(computermove==='scissors')
+        result='you tie.';
+        console.log(result);
+
+        } 
+                alert(`computer picked ${computermove}.you picked ${playermove}. So:${result}`);
+
+ }
+
+</script>
+</body>
+
+</html>
